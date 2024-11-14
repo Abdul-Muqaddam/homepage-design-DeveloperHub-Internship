@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        "custom-banner":"URL('/2nd section/banner.svg')"
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
