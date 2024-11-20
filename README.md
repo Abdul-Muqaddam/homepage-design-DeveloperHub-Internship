@@ -39,14 +39,14 @@ The goal is to provide a responsive and visually appealing user experience.
 1. Clone the repository:  
    ```bash
    git clone https://github.com/Abdul-Muqaddam/homepage-design-DeveloperHub-Internship.git
-
-## 🚀 Technologies Used
-
-- **Next.js:**: For building the homepage and making it fast and optimized.   
-- **React**: For managing components and dynamic features like animations.  
-- **Tailwind CSS**: For designing a clean and responsive layout.
-- **react-responsive library**:For making the website adjust to different screen sizes.
-
+2. Make sure you have **Node.js** installed. You can download it from [Node.js Official Website](https://nodejs.org/).  
+3. Install the **react-responsive** library by typing the following command in your terminal:  
+   ```bash
+   npm install react-responsive
+To start the development server, type the following command in your terminal:
+   
+      
+      npm run dev
 ## 📸 Screenshots 
 
 
@@ -87,6 +87,6 @@ The goal is to provide a responsive and visually appealing user experience.
   
 ## 📧 Contact
 If you have any questions or feedback, feel free to reach out:
-
+- **LinkedIn**:https://www.linkedin.com/in/abdul-muqaddam-a-137a61315/
 - **Email**: abdul.muqaddam.se@gmail.com
 - **GitHub**: Abdul-Muqaddam
