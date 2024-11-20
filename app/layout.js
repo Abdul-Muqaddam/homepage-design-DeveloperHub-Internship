@@ -1,6 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { ToggleContextProvider } from "./context/toggleContextProvider";
+import Sidebar from "@/components/sidebar"
+import Footer from "@/components/footer";
 
 
 const geistSans = localFont({
@@ -23,10 +26,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden `}
       >
+        <ToggleContextProvider>
+        <Sidebar/>
         <Navbar/>
         {children}
+        <Footer/>
+        </ToggleContextProvider>
       </body>
     </html>
   );
