@@ -2,7 +2,9 @@
 
 import { toggleContext } from "@/app/context/toggleContextProvider";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React, { useContext } from "react";
+
 const Sidebar = () => {
     const { toggleSideBar, setToggleSideBar } = useContext(toggleContext)
 

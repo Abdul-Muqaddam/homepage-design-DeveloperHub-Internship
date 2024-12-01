@@ -1,15 +1,24 @@
 "use client";
 
-import React, { useContext } from "react";
+import React, { useContext,useState,useEffect } from "react";
 import { toggleContext } from "@/app/context/toggleContextProvider";
 import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
+
+
 const Navbar = () => {
     const { toggleSideBar, setToggleSideBar } = useContext(toggleContext)
 
+    
+    
     const handleToggle = () => {
         setToggleSideBar(!toggleSideBar)
     }
+    
+    
+    
+    
+
 
     const is550px = useMediaQuery({ maxWidth: 550 })
     const is700px = useMediaQuery({ minWidth: 700 })
@@ -38,13 +47,15 @@ const Navbar = () => {
                         {
                             is550px ? "" : <div className={` flex items-center justify-center`}>
                                 <div className={` ${is550px ? " w-[90vw]" : ""} ${is800px ? "flex" : ""} relative z-0`}>
+
                                     <input type="text" placeholder="Search" className={`border-[1.5px] ${is800px ? "w-[30vw]" : is700px ? "" : is550px ? "" : "w-[90%]"} h-[40px] rounded-l-[6px] border-[#DEE2E7]  px-10 focus:outline-none focus:border-[1px] focus:border-[#0D6EFD]`} />
                                     {
+
                                         is800px ? <select className="focus:outline-none focus:border-[1.5px] border-[1.5px] border-l-transparent focus:border-[#0D6EFD] rounded-r-[6px] w-[120px] flex-shrink-0">
                                             <option disabled selected >All category</option>
-                                            <option>Automobiles</option>
-                                            <option>Clothes and wear</option>
-                                            <option>Home interiors</option>
+                                            <option value="1">Automobiles</option>
+                                            <option value="2">Clothes and wear</option>
+                                            <option value="3">Home interiors</option>
 
                                         </select> : ""
                                     }
@@ -122,17 +133,17 @@ const Navbar = () => {
                                 </li>
                                 <li className="font-medium cursor-pointer">
                                     <select name="" id="" className="focus:outline-none focus:border-[1.5px] focus:border-[#0D6EFD] rounded-sm flex-shrink-0">
-                                        <option value="">Help</option>
-                                        <option value="">FAQ</option>
-                                        <option value="">Contact</option>
+                                        <option value="1">Help</option>
+                                        <option value="2">FAQ</option>
+                                        <option value="3">Contact</option>
                                     </select>
                                 </li>
                             </ul>
                             <div className="flex gap-3">
                                 <select name="" id="" className="focus:outline-none focus:border-[1.5px] focus:border-[#0D6EFD] rounded-[3px] px-1 flex-shrink-0">
-                                    <option value="" >English,USD</option>
-                                    <option value="" >Spanish,EUR</option>
-                                    <option value="" >French,GBP</option>
+                                    <option value="1" >English,USD</option>
+                                    <option value="2" >Spanish,EUR</option>
+                                    <option value="3" >French,GBP</option>
                                 </select>
 
                                 {
@@ -144,9 +155,9 @@ const Navbar = () => {
                                             <option value="">
                                                 China
                                             </option>
-                                            <option value="">UAE</option>
-                                            <option value="US">US</option>
-                                            <option value="">Germany</option>
+                                            <option value="1">UAE</option>
+                                            <option value="2">US</option>
+                                            <option value="3">Germany</option>
                                         </select> : ""
                                 }
                             </div>
@@ -155,7 +166,7 @@ const Navbar = () => {
                     </> :
                         <div className="w-[100vw] h-[36px] flex justify-evenly">
                             <div className="bg-[#EFF2F4] text-[#0D6EFD] flex items-center justify-center w-[85.85px] h-[36px] rounded-[6px] text-[0.99rem]">
-                                All category
+                                AllCategory
                             </div>
                             <div className="bg-[#EFF2F4] text-[#0D6EFD] flex items-center justify-center w-[80.85px] h-[36px] rounded-[6px]">
                                 Gadgets

@@ -10,65 +10,71 @@ import { useMediaQuery } from "react-responsive";
 import CardService from "./components/cardService";
 import Head from "next/head";
 import CardNormal900px from "./components/cardNormal900px";
+import { useRouter } from "next/navigation";
+
+
 
 export default function Home() {
+  
+  
+  
   const is768px = useMediaQuery({ minWidth: 768 })
   const is600px = useMediaQuery({ minWidth: 600 })
   const is900px = useMediaQuery({ minWidth: 900 })
   const is830px = useMediaQuery({ minWidth: 830 })
   const is950px = useMediaQuery({ minWidth: 900 })
-
+  
   const [sec, setSec] = useState(59)
   const [min, setMin] = useState(34)
   const [hour, setHour] = useState(13)
-
+  
   useEffect(() => {
     const timeSec = setInterval(() => {
       setSec(prev => {
         if (prev > 0) {
           return prev - 1;
         } else {
-
+          
           return prev + 59;
         }
       })
     }, 1000)
     return () => { clearInterval(timeSec) }
   }, [])
-
-
+  
+  
   useEffect(() => {
     const timeMin = setInterval(() => {
       setSec(prev => {
         if (prev > 0) {
           return prev - 1;
         } else {
-
+          
           return prev + 59;
         }
       })
     }, 60000)
     return () => { clearInterval(timeMin) }
   }, [])
-
-
+  
+  
   useEffect(() => {
     const timeHour = setInterval(() => {
       setSec(prev => {
         if (prev > 0) {
           return prev - 1;
         } else {
-
+          
           return prev + 23;
         }
       })
     }, 3600000)
     return () => { clearInterval(timeHour) }
   }, [])
-
-
+  
+  
   useEffect(() => {
-
+    
     const timeMin = setInterval(() => {
       setMin(prev => {
         if (prev > 0) {
@@ -81,10 +87,13 @@ export default function Home() {
     }, 60000)
     return () => { clearInterval(timeMin) }
   }, [])
-
-
-
-
+  
+  const router=useRouter();
+  
+  const handleClick=()=>{
+    router.push("/category");
+  }
+  
   return (
     <>
       <Head>
@@ -283,7 +292,7 @@ export default function Home() {
                 <div className="text-[#1C1C1C] font-semibold text-[20px] w-[175px]">
                   Home and Outdoor
                 </div>
-                <button className="bg-[white] rounded-[6px] h-[40px] w-[123px] flex items-center justify-center font-medium">
+                <button className="bg-[white] rounded-[6px] h-[40px] w-[123px] flex items-center justify-center font-medium" onClick={handleClick}>
                   Source Now
                 </button>
               </div>
@@ -334,9 +343,9 @@ export default function Home() {
       {is900px ? "" :
         <>
           <div className="w-[100vw] flex justify-center">
-            <div className="w-[90vw] h-[40px] text-[#0D6EFD] text-[1.1rem] flex items-center ">
+            <div className="w-[90vw] h-[40px] text-[#0D6EFD] text-[1.1rem] flex items-center cursor-pointer" onClick={handleClick}>
               <div className="w-[108.5px] flex justify-between items-center">
-                Source now <img src="/4th section/arrow.svg" alt="" className="h-[15px] w-[15px] pt-1 font-bold" />
+                Source now <img src="/4th section/arrow.svg" alt="" className="h-[15px] w-[15px] pt-1 font-bold "  />
               </div>
             </div>
           </div>

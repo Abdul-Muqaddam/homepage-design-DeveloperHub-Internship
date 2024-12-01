@@ -22,8 +22,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="relative flex gap-3">
-                        <input type="text" className="rounded-[6px] border-[0.5px] border-[#606060] px-9 h-[40px] w-[240px] focus:outline-none focus:border-[1px] focus:border-[#0D6EFD]" placeholder="Email" />
-                        <img src="/footer/email.png" className="absolute top-3 left-2" />
+                        <input type="text" className="rounded-[6px] border-[0.5px] border-[#606060] px-9 h-[40px] w-[210px] focus:outline-none focus:border-[1px] focus:border-[#0D6EFD]" placeholder="Email" />
+                        <img  src="/footer/email.png" className="absolute top-3 left-2" />
                         <button className="bg-gradient-to-b from-[#127FFF] to-[#0067FF] text-white px-3 py-2 rounded-[6px]">Subscribe</button>
                     </div>
                 </div>

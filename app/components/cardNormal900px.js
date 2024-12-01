@@ -10,7 +10,7 @@ const CardNormal900px = ({src,tital,price}) => {
                     </div>
                 </div>
                 <div className="h-[100%] w-[50%] flex items-end justify-end">
-                    <img src={src} alt="" className="h-[90px] w-[90px]" />
+                    <img  src={src} alt="" height={90} width={90}  />
                 </div>
             </div>
         </>
