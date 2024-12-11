@@ -11,7 +11,7 @@ const CardRecommended = ({ src, price, description }) => {
                     <img  src={src} alt="" className={`${is500px ? "w-[35.71vw] h-[22.85vh]" : "w-[125px] h-[129px]"} `} />
                 </div>
                 <div className="w-[80%]">
-                    <div className="text-[#1C1C1C] text-[16px] font-medium">{price}</div>
+                    <div className="text-[#1C1C1C] text-[16px] font-medium">${price}</div>
                     <div className="text-[#8B96A5] text-[13px]">{description}</div>
                 </div>
             </div>

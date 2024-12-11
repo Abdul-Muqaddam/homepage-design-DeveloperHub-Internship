@@ -16,8 +16,8 @@ const Sidebar = () => {
             <div className={`w-[100vw] bg-black/50 h-[100vh] ${toggleSideBar ? "fixed" : "hidden"} top-0 z-10`} onClick={handleToggle}>
                 <motion.div
                     initial={{ x: "-100%" }}
-                    animate={{ x: toggleSideBar ? 0 : '-100%' }} // Move to 0 when open, 100% when closed
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }} // Smooth animation
+                    animate={{ x: toggleSideBar ? 0 : '-100%' }} 
+                    transition={{ type: 'spring', stiffness: 300, damping: 30 }} 
                     className="w-[250px] bg-white h-[100vh]">
 
                     <div className="w-[100%] h-[113px] bg-[#EFF2F4] flex items-center justify-center">

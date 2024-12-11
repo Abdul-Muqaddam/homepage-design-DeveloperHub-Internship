@@ -5,3 +5,10 @@
 .shadow-shopping-bag{
   box-shadow: 5px 0px 0px #0D6EFD33;
 }
+table,thead,tbody,th,td,tr{
+  border: 2px #E0E7E9 solid;
+  padding: 10px;
+}
+.tdata{
+  background-color: #EFF2F4;
+}
