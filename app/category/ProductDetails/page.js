@@ -14,7 +14,7 @@ import AboutSeller from '@/app/components/AboutSeller';
 import { useRouter } from 'next/navigation';
 
 
-function productDetails({ }) {
+const ProductDetails=()=> {
 
   const { description } = useContext(toggleContext)
   const { reviews } = useContext(toggleContext)
@@ -396,4 +396,4 @@ function productDetails({ }) {
   )
 }
 
-export default productDetails
+export default ProductDetails

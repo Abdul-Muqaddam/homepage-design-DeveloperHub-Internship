@@ -107,8 +107,8 @@ const Checkout = () => {
 
                     {
                         cart.map((item, index) => (
-                            <div className={"flex flex-col gap-4 mt-4"}>
-                                <CheckoutCard key={index} src={(item.src).slice(1)} title={item.title} detail={item.detail} price={item.price} />
+                            <div key={index}  className={"flex flex-col gap-4 mt-4"}>
+                                <CheckoutCard  src={(item.src).slice(1)} title={item.title} detail={item.detail} price={item.price} />
                                 <hr />
                             </div>
                         ))

@@ -30,7 +30,7 @@ export default function RootLayout({ children,navbarHidden }) {
   const router=useRouter()
   // const { cart }=useContext(toggleContext)
   const handleCart=()=>{
-    router.push("/category/productDetails/checkout")
+    router.push("/category/ProductDetails/checkout")
   }
   return (
     <html lang="en">

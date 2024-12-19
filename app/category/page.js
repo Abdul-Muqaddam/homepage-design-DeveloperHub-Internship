@@ -181,7 +181,7 @@ const Category = () => {
 
     const handleProductDetails = (src,title,price) => {
         setCategoryProduct({src:src,title,title,price:price})
-        router.push("/category/productDetails")
+        router.push("/category/ProductDetails")
     }
 
 
@@ -259,14 +259,14 @@ const Category = () => {
                     <div className={` ${is650px ? "flex flex-col gap-2" : is450px ? "flex gap-2" : "  "}   items-center justify-center `}>
                         <div className={` ${is650px ? "flex  gap-2  justify-center" : " flex items-center justify-center  gap-2"} flex-wrap`}  >
 
-                            {is450px ? cardsGrid.map((parameter) => (
-                                <div onClick={()=>handleProductDetails(parameter.src,parameter.title,parameter.price)}>
+                            {is450px ? cardsGrid.map((parameter,index) => (
+                                <div key={index} onClick={()=>handleProductDetails(parameter.src,parameter.title,parameter.price)}>
                                     <CardCategoryGrid key={parameter.index} src={parameter.src} price={parameter.price} stprice={parameter.stprice} />
                                 </div>
                             )) :
 
-                                cardsList.map((parameter) => (
-                                    <div onClick={()=>handleProductDetails(parameter.src,parameter.title,parameter.price)}>
+                                cardsList.map((parameter,index) => (
+                                    <div key={index} onClick={()=>handleProductDetails(parameter.src,parameter.title,parameter.price)}>
                                         <CardCategoryList src={parameter.src} title={parameter.title} price={parameter.price} orders={parameter.orders} />
                                     </div>
                                     ))}
